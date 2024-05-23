@@ -1,8 +1,13 @@
-<app-header />
+<app-header (featureSelected)="onNavigate($event)" />
 
 <div class="container">
+  @if (loadedFeatue==="recipe") {
   <app-recipes />
+
+  } @if (loadedFeatue !=='recipe') {
   <app-shopping-list />
+
+  }
 </div>
 
 <router-outlet />

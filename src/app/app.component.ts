@@ -18,4 +18,8 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 })
 export class AppComponent {
   title = 'angular-recipe-app';
+  loadedFeatue = 'recipe';
+  onNavigate(feature: string) {
+    this.loadedFeatue = feature;
+  }
 }
